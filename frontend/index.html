@@ -74,6 +74,10 @@
             border-bottom: 2px solid #2186eb;
         }
 
+        .none{
+            text-decoration: none;
+        }
+
         .content {
             padding: 35px 32px;
             background: #fff;
@@ -346,10 +350,10 @@
         </div>
 
         <div class="nav-tabs">
-            <button class="nav-tab active" onclick="showTab('dashboard')">Dashboard</button>
-            <button class="nav-tab" onclick="showTab('donors')">Donors</button>
-            <button class="nav-tab" onclick="showTab('inventory')">Inventory</button>
-            <button class="nav-tab" onclick="showTab('requests')">Requests</button>
+            <button class="nav-tab active" onclick="showTab('dashboard')" ><a class="none" href="#Dashboard">Dashboard</a></button>
+            <button class="nav-tab" onclick="showTab('donors')"><a class="none" href="#Donor">Donors</a></button>
+            <button class="nav-tab" onclick="showTab('inventory')"><a class="none" href="#inventory">Inventory</a></button>
+            <button class="nav-tab" onclick="showTab('requests')"><a class="none" href="#request">Requests</a></button>
         </div>
 
         <div class="content">
@@ -394,7 +398,9 @@
             <!-- Donors Tab -->
             <div id="donors" class="tab-content">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <div id="Donor">
                     <h2>Donor Management</h2>
+                    </div>
                     <button class="btn" onclick="showAddDonorModal()">Add New Donor</button>
                 </div>
 
@@ -423,7 +429,9 @@
             <!-- Inventory Tab -->
             <div id="inventory" class="tab-content">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                     <div id="inventory">
                     <h2>Blood Inventory</h2>
+                    </div>
                     <button class="btn" onclick="showAddBloodModal()">Add Blood Unit</button>
                 </div>
 
@@ -448,7 +456,9 @@
             <!-- Requests Tab -->
             <div id="requests" class="tab-content">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                   <div id="request">
                     <h2>Blood Requests</h2>
+                    </div>
                     <button class="btn" onclick="showAddRequestModal()">New Request</button>
                 </div>
 
